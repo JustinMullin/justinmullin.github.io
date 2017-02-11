@@ -17,7 +17,7 @@
 <div class="gradient"></div>
 <div class="page">
   <div class="header">
-    <h1>Justin Mullin<svg id="icon" width="0.2em" height="0.5em" overflow="visible" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <h1><a href="" onclick="navigate('#home'); return false;">Justin Mullin</a><svg id="icon" width="0.2em" height="0.5em" overflow="visible" viewBox="0 0 1 1" preserveAspectRatio="none">
       <linearGradient id="gradient" x1="1" x2="0" y1="0" y2="0">
         <stop offset="0%" stop-color="black"/>
         <stop offset="100%" stop-color="white"/>
@@ -26,9 +26,25 @@
     </svg>
     </h1>
 
+    <ul class="nav">
+      <li><a href="" onclick="navigate('#about-me'); return false;">About Me</a></li>
+      <!--<li><a href="" onclick="navigate('#resume'); return false;">Resume</a></li>-->
+      <!--<li><a href="" onclick="navigate('#games'); return false;">Games</a></li>-->
+    </ul>
+
+    <h1 class="second">
+      <svg id="icon" width="0.2em" height="0.5em" overflow="visible" viewBox="0 0 1 1" preserveAspectRatio="none">
+        <linearGradient id="gradient" x1="1" x2="0" y1="0" y2="0">
+          <stop offset="0%" stop-color="black"/>
+          <stop offset="100%" stop-color="white"/>
+        </linearGradient>
+        <g fill="url(#gradient)"><polygon points="0,0 0,1 1,1 1,0"></polygon></g>
+      </svg>
+    </h1>
+
     <ul class="contact">
-      <li><a href="http://twitter.com/JustinMullin">Twitter</a></li>
-      <li><a href="mailto:justinamullin@gmail.com">E-mail</a></li>
+      <li><a target="_blank" href="http://twitter.com/JustinMullin">Twitter</a></li>
+      <li><a target="_blank" href="mailto:justinamullin@gmail.com">E-mail</a></li>
     </ul>
   </div>
   <div class="description">
@@ -51,11 +67,35 @@
       <g fill="url(#bar-gradient)" opacity="0.5"><polygon points="0,0 0,1 1,1 1,0"></polygon></g>
     </svg>
     <div class="separator"></div>
-    <div class="block"><h2><em>I am a</em> maker <em>at heart.</em></h2></div>
-    <div class="block"><p class="line-a"><em>I work as a </em>Principal Software Engineer <em>at</em> The Nerdery.</p></div>
-    <div class="block"><p class="line-a"><em>I love the JVM.</em> Scala and Kotlin <em>make me particularly happy.</em></p></div>
-    <div class="block"><p class="line-b"><em>I am an amateur</em> game developer, <em>a</em> pianist, <em>a</em> wannabe composer, <em>a</em> husband, <em>and a</em> father of three.</p></div>
-    <div class="block"><p class="line-c"><em>I love to</em> learn, <em>to</em> teach, <em>to</em> play, <em>and to</em> wonder.</p></div>
+    <div class="section" id="home">
+      <div class="block"><h2><em>I am a</em> maker <em>at heart.</em></h2></div>
+      <div class="block"><h3 class="line-a"><em>I work as a </em>Principal Software Engineer <em>at</em> The Nerdery.</h3></div>
+      <div class="block"><h3 class="line-a"><em>I love the JVM.</em> Scala and Kotlin <em>make me particularly happy.</em></h3></div>
+      <div class="block"><h3 class="line-b"><em>I am an amateur</em> game developer, <em>a</em> pianist, <em>a</em> wannabe composer, <em>a</em> husband, <em>and a</em> father of three.</h3></div>
+      <div class="block"><h3 class="line-c"><em>I love to</em> learn, <em>to</em> teach, <em>to</em> play, <em>and to</em> wonder.</h3></div>
+    </div>
+    <div class="section hidden" id="about-me">
+      <div class="block">
+        <p>Hey! I'm Justin Mullin. I'm a software developer living in Minnesota, with a passion for games, music and languages.</p>
+      </div>
+      <div class="block">
+        <p>I've been writing software since a very young age, and I absolutely love the simple pleasure of making things tick with code.
+          As a Principal Software Engineer at <a href="nerdery.com">The Nerdery</a> I build web applications of all shapes and sizes,
+          engage in architecture and design of applications, and mentor developers to help them meet their full potential for
+          technical excellence.</p>
+      </div>
+      <div class="block">
+        <p>In my free time I enjoy making small games, whether small personal projects or for game jams like
+          <a href="http://ludumdare.com/">Ludum Dare</a>. I also like to play piano, occassionally pretend to write music, and
+          spend time with my wife and three wonderful kids.</p>
+      </div>
+    </div>
+    <div class="section hidden" id="resume">
+
+    </div>
+    <div class="section hidden" id="games">
+
+    </div>
   </div>
 </div>
 <div id="shapes">
@@ -80,5 +120,15 @@
     <g fill="url(#gradient-square)" opacity="1"><polygon points="0,0 0,1 1,1 1,0"></polygon></g>
   </svg>
 </div>
+
+<script src="https://cdn.jsdelivr.net/cash/1.3.0/cash.min.js"></script>
+
+<script>
+function navigate(id) {
+    $(".section").addClass("hidden");
+    $(id).removeClass("hidden");
+}
+</script>
+
 </body>
 </html>
