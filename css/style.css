@@ -46,6 +46,12 @@ a:hover {
     padding: 2em 0 1em;
 }
 
+em {
+    font-size: 95%;
+    font-style: normal;
+    color: #707870
+}
+
 hr {
     margin: 1em 0 0.5em;
 }
@@ -63,15 +69,19 @@ p {
 }
 
 .line-a {
-    color: #606860;
+    color: #202820;
 }
 
 .line-b {
-    color: #707870;
+    color: #404840;
 }
 
 .line-c {
-    color: #808880;
+    color: #606860;
+}
+
+.line-c em {
+    color: #98A098;
 }
 
 ul li {
