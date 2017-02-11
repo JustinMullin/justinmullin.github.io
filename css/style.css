@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	color: #001000;
+	font-family: "PT Sans Narrow", sans-serif;
+	font-size: 90%;
+
+	text-align: left;
+	line-height: 1.3;
+}
+
+a, a:active, a:visited {
+	color: #405040;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #608060;
+}
+
+.page {
+	position: absolute;
+    margin: auto 10%;
+
+	top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.header * {
+    display: inline;
+}
+
+.contact {
+    padding-left: 1em;
+}
+
+.description {
+    padding: 2em 0 1em;
+}
+
+hr {
+    margin: 1em 0 0.5em;
+}
+
+h2 {
+	font-size: 2.3em;
+	font-weight: 400;
+    padding: 0.25em 0;
+}
+
+p {
+    font-size: 2em;
+    font-weight: 400;
+    padding: 0.25em 0;
+}
+
+.line-a {
+    color: #606860;
+}
+
+.line-b {
+    color: #707870;
+}
+
+.line-c {
+    color: #808880;
+}
+
+ul li {
+	display: inline;
+	font-weight: 400;
+	padding-right: 0.5em;
+	font-size: 1.5em;
+	letter-spacing: 0.01em;
+}
+
+@media screen
+and (min-width : 320px)
+and (max-width: 768px){
+    .page {
+        margin-top: 2em;
+    }
+}
+
+@media screen
+and (min-width : 768px) {
+    .page {
+        height: 20em;
+    }
+}
+
+@media screen
+and (min-width : 1024px) {
+    .page {
+        width: 35em;
+        height: 30em;
+    }
+}
