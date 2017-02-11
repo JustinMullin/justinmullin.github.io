@@ -27,13 +27,47 @@ a:hover {
 }
 
 .page {
+    background: #fff;
+
 	position: absolute;
-    margin: auto 10%;
+    margin: auto 0 auto 12em;
 
 	top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+}
+
+#shapes {
+    position: absolute;
+    margin: auto;
+
+    overflow: hidden;
+
+    width: 12em;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.square {
+    position: absolute;
+
+    width: 2em;
+    height: 30em;
+
+    margin: auto;
+
+    left: 11em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.bar {
+    position: absolute;
 }
 
 .header * {
@@ -45,7 +79,11 @@ a:hover {
 }
 
 .description {
-    padding: 2em 0 1em;
+    padding: 1em 0 2em;
+}
+
+.description .separator {
+    padding-top: 1.5em;
 }
 
 em {
@@ -79,17 +117,6 @@ p {
     background: #fff;
 }
 
-.block::before {
-    content: '';
-    background: linear-gradient(to bottom, #000 0%, #fff 100%);
-    width: 3px;
-    height: 100%;
-    top: 0;
-    left: -3px;
-    position:absolute;
-    z-index:-1;
-}
-
 .line-a {
     color: #202820;
 }
@@ -99,7 +126,7 @@ p {
 }
 
 .line-c {
-    color: #606860;
+    color: #404840;
 }
 
 .line-c em {
@@ -114,23 +141,115 @@ ul li {
 	letter-spacing: 0.01em;
 }
 
+/* Animation */
+@keyframes flicker {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes flicker-light {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+#square-1 {
+    animation: flicker 10s ease infinite;
+    left: 11em;
+}
+
+#square-2 {
+    animation-delay: 2s;
+    animation: flicker 8s ease infinite;
+    left: 11.25em;
+}
+
+#square-3 {
+    animation-delay: 3s;
+    animation: flicker 6s ease infinite;
+    left: 11.5em;
+}
+
+#square-4 {
+    animation-delay: 4s;
+    animation: flicker 4s ease infinite;
+    left: 11.75em;
+}
+
+#square-5 {
+    animation: flicker-light 10s ease infinite;
+    left: 11.75em;
+}
+
+#bar-1 {
+    animation: flicker-light 10s ease infinite;
+    height: 0.4em;
+}
+
+#bar-2 {
+    animation-delay: 2s;
+    animation: flicker 8s ease infinite;
+    height: 0.6em;
+}
+
+#bar-3 {
+    animation-delay: 3s;
+    animation: flicker 12s ease infinite;
+    height: 0.8em;
+}
+
+#bar-4 {
+    animation-delay: 4s;
+    animation: flicker 8s ease infinite;
+    height: 1em;
+}
+
+/* Breakpoints */
+
 @media screen
-and (min-width : 320px)
+and (min-width : 0px)
 and (max-width: 768px){
     .page {
-        margin-top: 2em;
+        margin: 2em 0 auto 2em;
     }
+    .header * {
+        display: block;
+    }
+    #icon {
+        display: none;
+    }
+    h1 {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .contact {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+    #shapes { width: 2em; }
+    #square-1 { left: 1em; }
+    #square-2 { left: 1.25em; }
+    #square-3 { left: 1.5em; }
+    #square-4 { left: 1.75em; }
+    #square-5 { left: 1.75em; }
 }
 
 @media screen
 and (min-width : 768px) {
-    .page {
-        height: 20em;
-    }
-}
-
-@media screen
-and (min-width : 1024px) {
     .page {
         width: 42em;
         height: 30em;
