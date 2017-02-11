@@ -17,11 +17,13 @@ body {
 
 a, a:active, a:visited {
 	color: #405040;
-	text-decoration: none;
+    text-decoration: none;
+	border-bottom: 1px solid #d8d8d8;
 }
 
 a:hover {
 	color: #608060;
+    border-bottom: 1px solid #808080;
 }
 
 .page {
@@ -38,7 +40,7 @@ a:hover {
     display: inline;
 }
 
-.contact {
+#icon {
     padding-left: 1em;
 }
 
@@ -56,16 +58,36 @@ hr {
     margin: 1em 0 0.5em;
 }
 
+h1 {
+    padding-left: 1em;
+}
+
 h2 {
 	font-size: 2.3em;
 	font-weight: 400;
-    padding: 0.25em 0;
 }
 
 p {
     font-size: 2em;
     font-weight: 400;
-    padding: 0.25em 0;
+}
+
+.block {
+    margin: 0.5em 0;
+    padding-left: 1em;
+
+    background: #fff;
+}
+
+.block::before {
+    content: '';
+    background: linear-gradient(to bottom, #000 0%, #fff 100%);
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: -3px;
+    position:absolute;
+    z-index:-1;
 }
 
 .line-a {
@@ -110,7 +132,7 @@ and (min-width : 768px) {
 @media screen
 and (min-width : 1024px) {
     .page {
-        width: 35em;
+        width: 42em;
         height: 30em;
     }
 }
