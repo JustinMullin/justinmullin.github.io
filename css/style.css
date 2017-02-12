@@ -3,6 +3,8 @@
 .section {
     position: absolute;
     visibility: visible;
+
+    padding-right: 2em;
 }
 
 .section.hidden {
@@ -143,6 +145,10 @@ p {
     font-size: 1.4em;
 }
 
+small {
+    font-size: 120%;
+}
+
 .block {
     margin: 0.5em 0;
     padding-left: 1em;
@@ -206,11 +212,11 @@ ul li {
 
 #logo {
     transform-origin: 0.25em 0.25em;
-    animation: spin 3s linear infinite;
+    animation: spin 5s linear infinite;
 }
 
 #logo-color {
-    animation: colors 9s linear infinite;
+    animation: colors 15s linear infinite;
 }
 
 #square-1 {
