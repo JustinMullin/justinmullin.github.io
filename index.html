@@ -20,7 +20,7 @@
     <h1>
       <svg id="logo" width="0.5em" height="0.5em" overflow="visible" viewBox="0 0 1 1" preserveAspectRatio="none">
         <g id="logo-color" fill="#ff0000"><polygon points="0,0 0,1 1,1 1,0"></polygon></g>
-      </svg><a href="" onclick="navigate('#home'); return false;">Justin Mullin</a>
+      </svg><a href="#" onclick="navigate('#home');">Justin Mullin</a>
       <svg id="icon" width="0.2em" height="0.5em" overflow="visible" viewBox="0 0 1 1" preserveAspectRatio="none">
       <linearGradient id="gradient" x1="1" x2="0" y1="0" y2="0">
         <stop offset="0%" stop-color="black"/>
@@ -31,9 +31,9 @@
     </h1>
 
     <ul class="nav">
-      <li><a href="" onclick="navigate('#about-me'); return false;">About Me</a></li>
-      <li><a href="" onclick="navigate('#resume'); return false;">Resume</a></li>
-      <!--<li><a href="" onclick="navigate('#games'); return false;">Games</a></li>-->
+      <li><a href="#about-me" onclick="navigate('#about-me');">About Me</a></li>
+      <li><a href="#games" onclick="navigate('#games');">Games</a></li>
+      <!-- <li><a href="#resume" onclick="navigate('#resume');">Resume</a></li> -->
     </ul>
 
     <h1 class="second">
@@ -74,8 +74,7 @@
     <div class="section" id="home">
       <div class="block"><h2><em>I am a</em> maker <em>at heart.</em></h2></div>
       <div class="block"><h3 class="line-a"><em>I work as a </em>Principal Software Engineer <em>at</em> The Nerdery.</h3></div>
-      <div class="block"><h3 class="line-a"><em>I love the JVM.</em> Scala and Kotlin <em>make me particularly happy.</em></h3></div>
-      <div class="block"><h3 class="line-b"><em>I am an amateur</em> game developer, <em>a</em> pianist, <em>a</em> wannabe composer, <em>a</em> husband, <em>and a</em> father of three.</h3></div>
+      <div class="block"><h3 class="line-b"><em>I'm an amateur</em> game developer, <em>a</em> pianist,<br/><em>a</em> husband, <em>and a</em> father of three.</h3></div>
       <div class="block"><h3 class="line-c"><em>I love to</em> learn, <em>to</em> teach, <em>to</em> play, <em>and to</em> wonder.</h3></div>
     </div>
     <div class="section hidden" id="about-me">
@@ -84,8 +83,8 @@
       </div>
       <div class="block">
         <p>I've been writing software since a very young age, and I absolutely love the simple pleasure of making things tick with code.
-          At <a href="nerdery.com">The Nerdery</a> I build web applications of all shapes and sizes, engage in architecture and
-          design of applications, and mentor developers to help them meet their full potential for technical excellence.</p>
+          At <a href="nerdery.com">The Nerdery</a> I build web applications of all shapes and sizes, architect and design applications,
+          and mentor developers to help them meet their full potential.</p>
       </div>
       <div class="block">
         <p>In my free time I enjoy making small games, whether small personal projects or for game jams like
@@ -95,24 +94,75 @@
     </div>
     <div class="section hidden" id="resume">
       <div class="block">
-        <p><strong>Principal Software Engineer</strong> - The Nerdery, Bloomington MN</p>
-        <small>August 2014 - present</small>
+        <h3>Experience</h3>
+        <p>Backend developer with experience on a wide variety of production applications and an affinity for the JVM.
+          Able to architect, design and implement web and standalone applications of many shapes and sizes.</p>
       </div>
-      <div class="block">
-        <p><strong>Senior Software Engineer</strong> - The Nerdery, Bloomington MN</p>
-        <small>January 2013 - August 2014</small>
-      </div>
-      <div class="block">
-        <p><strong>Interactive Developer</strong> - The Nerdery, Bloomington MN</p>
-        <small>January 2011 - January 2012</small>
-      </div>
-      <div class="block">
-        <p><strong>Software Development Intern</strong> - Minnetronix, Saint Paul MN</p>
-        <small>May 2008 - August 2010 [during summers]</small>
+      <div class="row">
+        <div class="column">
+          <h3>Skills</h3>
+          <div class="block">
+            <p><strong>Expertise in:</strong></p>
+            <p>Java, Scala, Kotlin, Spring Framework and Boot, Play Framework, REST</p>
+          </div>
+          <div class="block">
+            <p><strong>Extensive experience with:</strong></p>
+            <p>Akka, Slick, Docker, Hibernate, PostgreSQL, MySQL, Git, Jenkins, AWS</p>
+          </div>
+          <div class="block">
+            <p><strong>Comfortable working with:</strong></p>
+            <p>JavaScript, Python, Clojure, Cassandra, Kafka, Storm, Spark, ElasticSearch</p>
+          </div>
+          <h3>Strengths</h3>
+          <div class="block">
+            <p>Effective collaborator. Experienced with greenfield development, legacy support, and long term refactoring/rebuild.
+              Equally comfortable teaching and learning from others.</p>
+          </div>
+        </div>
+        <div class="column">
+          <h3>Work History</h3>
+          <div class="block">
+            <p><strong>Principal Software Engineer</strong> - The Nerdery, Bloomington MN</p>
+            <small>August 2014 - present</small>
+          </div>
+          <div class="block">
+            <p><strong>Senior Software Engineer</strong> - The Nerdery, Bloomington MN</p>
+            <small>January 2013 - August 2014</small>
+          </div>
+          <div class="block">
+            <p><strong>Interactive Developer</strong> - The Nerdery, Bloomington MN</p>
+            <small>January 2011 - January 2012</small>
+          </div>
+          <div class="block">
+            <p><strong>Software Development Intern</strong> - Minnetronix, Saint Paul MN</p>
+            <small>May 2008 - August 2010 [summers]</small>
+          </div>
+          <h3>Education</h3>
+          <div class="block">
+            <p><strong>University of Minnesota, Morris</strong> - Morris, MN</p>
+            <small>BA, Computer Science - summa cum laude</small>
+            <small>August 2007 - December 2010</small>
+          </div>
+        </div>
       </div>
     </div>
     <div class="section hidden" id="games">
-      <p>WIP</p>
+      <div class="block">
+        <p>Sometimes I make games. Here are a few of my favorites. You can find more games at Itch.io over here:
+          <a href="https://justinmullin.itch.io/" target="_blank">https://justinmullin.itch.io</a>.</p>
+      </div>
+      <div class="block">
+        <div class="games">
+          <div class="game"><a target="_blank" href="https://justinmullin.itch.io/wellspring-wanderer"><p><strong>Wellspring Wanderer</strong></p>
+            <img src="https://img.itch.io/aW1hZ2UvNDgwMTMvMjEyNTI1LnBuZw==/180x143%23/TntAVc.png"></a></div>
+          <div class="game"><a target="_blank" href="https://justinmullin.itch.io/aduno-ld"><p><strong>Aduno</strong></p>
+            <img src="https://img.itch.io/aW1hZ2UvMTE5NjAzLzU1MTE2NC5wbmc=/180x143%23/25MmF0.png"></a></div>
+          <div class="game"><a target="_blank" href="https://justinmullin.itch.io/nanofactory"><p><strong>Nanofactory</strong></p>
+            <img src="https://img.itch.io/aW1hZ2UvMTE5NjA2LzU1MTE3Ni5wbmc=/180x143%23/gfcIbf.png"></a></div>
+          <div class="game"><a target="_blank" href="https://justinmullin.itch.io/close-encounters-of-the-word-kind"><p><strong>Close Encounters of the Word Kind</strong></p>
+            <img src="https://img.itch.io/aW1hZ2UvMTE5NjAxLzU1MTE1Mi5wbmc=/180x143%23/fTpzTx.png"></a></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -142,10 +192,18 @@
 <script src="https://cdn.jsdelivr.net/cash/1.3.0/cash.min.js"></script>
 
 <script>
-function navigate(id) {
-    $(".section").addClass("hidden");
-    $(id).removeClass("hidden");
-}
+  (function() {
+      switch(window.location.hash) {
+          case "#about-me": navigate("#about-me"); break;
+          case "#resume": navigate("#resume"); break;
+          case "#games": navigate("#games"); break;
+      }
+  })();
+
+  function navigate(id) {
+      $(".section").addClass("hidden");
+      $(id).removeClass("hidden");
+  }
 </script>
 
 </body>

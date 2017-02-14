@@ -9,6 +9,7 @@
 
 .section.hidden {
     visibility: hidden;
+    display: none;
 }
 
 #home {
@@ -152,8 +153,29 @@ small {
 .block {
     margin: 0.5em 0;
     padding-left: 1em;
+}
 
-    background: #fff;
+.row {
+    margin: 0.5em 0;
+    padding-left: 1em;
+}
+
+.column {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.games {
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.game {
+    width: 45%;
+    display: inline-block;
 }
 
 .line-a {
@@ -298,12 +320,21 @@ and (max-width: 768px){
     body {
         box-shadow: none;
     }
+    .game {
+        display: block;
+        padding-bottom: 1em;
+        width: 100%;
+    }
+    .column {
+        width: 100%;
+        display: block;
+    }
 }
 
 @media screen
 and (min-width : 768px) {
     .page {
-        width: 42em;
-        height: 30em;
+        width: 45em;
+        height: 28em;
     }
 }
