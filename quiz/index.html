@@ -5,6 +5,7 @@
 		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 		<script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		<script type="text/babel">
 
 			const rootElement = document.getElementById('root');
@@ -20,28 +21,39 @@
 			class Container extends React.Component {
 			  constructor(props) {
 			    super(props);
-			    this.updateInfo();
-			    this.state = {question: "", answers: ["a", "b", "c", "d"]}
+			    this.nextQuestion();
+			    this.state = {question: "", answers: ["a", "b", "c", "d"], showAnswer: false}
         }
 
-			  updateInfo = async () => {
-          const response = await fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=medium&type=multiple');
+        guess = async (answer) => {
+          this.setState({showAnswer: true, guess: answer});
+				};
+
+			  nextQuestion = async () => {
+          const response = await fetch('https://opentdb.com/api.php?amount=1&type=multiple');
           const json = await response.json();
           const data = json.results[0];
           const answers = [data.correct_answer].concat(data.incorrect_answers);
           shuffle(answers);
-          this.setState({question: data.question, answers: answers})
+          this.setState({question: data.question, answers: answers, correct: data.correct_answer, guess: null, showAnswer: false})
         };
 
         render() {
           return (
-              <div>
-                <h1 dangerouslySetInnerHTML={{__html: this.state.question}}/>
-                <ul>
-									{this.state.answers.map(answer => <li dangerouslySetInnerHTML={{__html: answer}}/>)}
-								</ul>
-								<button onClick={this.updateInfo}>New Question</button>
-              </div>
+              <div class="container">
+                <div class="text-center">
+                  <h1 dangerouslySetInnerHTML={{__html: this.state.question}}/>
+                  {this.state.showAnswer ? [
+									    this.state.answers.map(answer =>
+													answer == this.state.correct ? <button class="btn btn-lg btn-success btn-block" dangerouslySetInnerHTML={{__html: answer}}/>
+                              : (answer == this.state.guess ? <button class="btn btn-lg btn-warning btn-block" dangerouslySetInnerHTML={{__html: answer}}/> : <button class="btn btn-lg btn-light btn-block" dangerouslySetInnerHTML={{__html: answer}}/>)
+                      ),
+                      <button class="btn btn-lg btn-primary btn-block" onClick={this.nextQuestion}>Next Question</button>
+									] : this.state.answers.map(answer =>
+											<button class="btn btn-lg btn-secondary btn-block" onClick={this.guess.bind(this, answer)} dangerouslySetInnerHTML={{__html: answer}}/>
+									)}
+                </div>
+							</div>
           );
         }
 
